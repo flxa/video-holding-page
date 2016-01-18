@@ -1,0 +1,59 @@
+@import url("bootstrap.min.css");
+
+video {
+	position: fixed;
+	top: 25%;
+	left: 25%;
+	min-width: 100%;
+	min-height: 100%;
+	width: 90vw;
+	height: 80vh;
+	z-index: -100;
+	transform: translateX(-25%) translateY(-25%);
+	background: #ffffff;
+	background-size: contain;
+	transition: 1s opacity;
+}
+
+section {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: flex-start;
+	text-align: center;
+}
+
+article {
+	width: 100vw;
+}
+
+nav {
+	padding: 4em;
+}
+
+button {
+	background: transparent;
+	border: 3px solid #373A3C;
+	font-size: 1.5em;
+	padding: 10px;
+	line-height: 1.2;
+	font-weight: bold;
+}
+
+footer {
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+

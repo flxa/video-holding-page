@@ -1,0 +1,67 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+<video autoplay="" id="bgvid" loop="">
+	<!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+	<!--<source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm">-->
+	<!--<source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4">-->
+	<source src="img/jp_movie.mp4" type="video/mp4">
+</video>
+<section>
+	<article>
+		<nav class="main-navigation">
+			<button>New Site Coming Soon</button>
+		</nav>
+	</article>
+	<footer>
+		<h4>Jennings Print</h4>
+		<div>
+			<a href="tel:0249335735">Phone: 02 4933 5735</a>
+		</div>
+		<div>
+			<a href="mailto:admin@jenningsprint.com.au">Email: admin@jenningsprint.com.au</a>
+		</div>
+		<div>
+			<p>12 Yilen Close,<br>
+				Beresfield, NSW 2322<br>
+				<span>Monday to Friday 8.30 to 5.00pm</span></p>
+		</div>
+	</footer>
+</section>
+<script>
+	var vid = document.getElementById("bgvid");
+	var pauseButton = document.querySelector("button");
+
+	function vidFade() {
+		vid.classList.add("stopfade");
+	}
+
+	vid.addEventListener('ended', function() {
+		// only functional if "loop" is removed
+		vid.pause();
+		// to capture IE10
+		vidFade();
+	});
+
+
+	pauseButton.addEventListener("click", function() {
+		vid.classList.toggle("stopfade");
+		if (vid.paused) {
+			vid.play();
+			pauseButton.innerHTML = "New Site Coming Soon";
+		} else {
+			vid.pause();
+			pauseButton.innerHTML = "Paused";
+		}
+	})
+
+
+</script>
+
+</body></html>
