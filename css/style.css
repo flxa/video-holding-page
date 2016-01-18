@@ -51,9 +51,21 @@ footer {
     font-size: 12px;
 }
 
+footer img {
+	width: 200px;
+    margin: 20px;
+}
+
 h1 {
 	font-size: 20px;
 	font-weight: bold;
+	border-bottom: 1px solid #E8E8E8;
+    padding: .25em;
 }
-
+.flex {
+	display: flex;
+}
+.flex div {
+	flex: 1;
+}
 
